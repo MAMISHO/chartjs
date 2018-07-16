@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+    <canvas id="line-chart" width="800" height="450"></canvas>
+<script>
+    new Chart(document.getElementById("line-chart"), {
+  type: 'scatter',
+  data: {
+      datasets: [
+        {
+         label: "P3",
+         borderColor: "#3e95cd",
+         data: [
+            {
+                x: 0,
+                y: 5
+            }, {
+                x: 5,
+                y: 10
+            }, {
+                x: 8,
+                y: 5
+            }, {
+                x: 15,
+                y: 0
+            }
+        ]},
+        {
+         label: "P5",
+         backgroundColor: "rgba(0,0,0,0.2)",
+         backgroundColorHover: "#3e95cd",
+         data: [
+            {
+                x: 0,
+                y: 2
+            }, {
+                x: 5,
+                y: 4
+            }, {
+                x: 8,
+                y: 15
+            }, {
+                x: 15,
+                y: 20
+            }
+        ]},
+        {
+          label: "IMC1",
+          backgroundColor: "rgba(193,46,12,0.2)",
+          borderColor: "rgba(193,46,12,1)",
+          type: 'bubble',
+          data: [{
+            x: 3.5,
+            y: 4.721,
+            r: 10
+          }]
+        },
+        {
+          label: "IMC2",
+          backgroundColor: "rgba(163,76,12,1)",
+          borderColor: "rgba(163,76,12,1)",
+          type: 'bubble',
+          data: [{
+            x: 6.5,
+            y: 10.721,
+            r: 10
+          }]
+        }
+      ]
+   },
+  options: {
+    title: {
+      display: true,
+      text: 'World population per region (in millions)'
+    }
+  }
+});
+</script>
+</body>
+</html>
